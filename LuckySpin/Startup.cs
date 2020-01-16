@@ -20,8 +20,8 @@ namespace LuckySpin
             {   
                 endpoints.MapControllerRoute(
                     name: "default", 
-                    pattern: "{controller}/{action}/{id}", 
-                    defaults: new { controller = "Spinner", action = "Index", id = "luck:int?" }
+                    pattern: "{controller}/{action}/{luck:int:range(1,9)}", 
+                    defaults: new { controller = "Spinner", action = "Index", luck = "luck:int?"}
                     ); 
             });
         }
